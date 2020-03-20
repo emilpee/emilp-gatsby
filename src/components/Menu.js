@@ -4,7 +4,7 @@ import Link from "gatsby-link"
 const Menu = () => (
   <nav
     style={{
-      background: "#ccc",
+      background: "#222",
     }}
   >
     <ul

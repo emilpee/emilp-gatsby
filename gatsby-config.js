@@ -2,9 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Emil Petersson`,
     description: `This is a portfolio page for Emil Petersson, a front end developer based in Gothenburg.`,
-    author: `@gatsbyjs`,
+    author: `Emil Petersson`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
