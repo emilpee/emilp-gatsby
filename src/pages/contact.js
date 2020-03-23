@@ -3,11 +3,11 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import { Container } from "../components/StyledComponents"
 
-const AboutPage = () => (
+const ContactPage = () => (
   <Layout>
     <Container>
-      <SEO title="about" />
-      <h1>About me</h1>
+      <SEO title="contact" />
+      <h1>Contact</h1>
       <p>
         Löksås ipsum hav gör dag själv precis från bäckasiner hav samma, och mot
         mjuka att se helt omfångsrik gamla och ingalunda, sista sax sällan tre
@@ -21,4 +21,4 @@ const AboutPage = () => (
   </Layout>
 )
 
-export default AboutPage
+export default ContactPage

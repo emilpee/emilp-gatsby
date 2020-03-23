@@ -1,16 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-
-const Container = styled.div`
-  margin: 3rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+import { Container } from "../components/StyledComponents"
 
 const IndexPage = () => (
   <Layout>
