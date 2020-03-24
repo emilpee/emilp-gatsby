@@ -5,22 +5,22 @@ import { UlList } from "./StyledComponents"
 const Menu = () => (
   <nav
     style={{
-      background: "#222",
+      background: "rgba(0, 0, 0, .8)",
     }}
   >
     <UlList>
       <li>
-        <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
           Home
         </Link>
       </li>
       <li>
-        <Link style={{ textDecoration: "none" }} to="/about">
+        <Link style={{ textDecoration: "none", color: "#fff" }} to="/about">
           About
         </Link>
       </li>
       <li>
-        <Link style={{ textDecoration: "none" }} to="/contact">
+        <Link style={{ textDecoration: "none", color: "#fff" }} to="/contact">
           Contact
         </Link>
       </li>
