@@ -11,6 +11,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
 import Menu from "./Menu"
 import "./layout.css"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #eee;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -41,6 +48,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
+      <GlobalStyle />
     </>
   )
 }
