@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+// Variables
+const purple = "#ae4fe6"
+const red = "#dd342"
+
 export const Container = styled.div`
   margin: 3rem auto;
   display: flex;
@@ -7,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `
+
 export const UlList = styled.ul`
   list-style: none;
   display: flex;
