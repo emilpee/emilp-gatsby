@@ -1,6 +1,16 @@
 import React from "react"
 import Link from "gatsby-link"
-import { UlList } from "./StyledComponents"
+import styled from "styled-components"
+
+const MenuList = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0;
+`
 
 const Menu = () => (
   <nav
@@ -8,7 +18,7 @@ const Menu = () => (
       background: "rgba(0, 0, 0, .8)",
     }}
   >
-    <UlList>
+    <MenuList>
       <li>
         <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
           Home
@@ -24,7 +34,7 @@ const Menu = () => (
           Contact
         </Link>
       </li>
-    </UlList>
+    </MenuList>
   </nav>
 )
 
