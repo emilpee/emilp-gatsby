@@ -18,21 +18,13 @@ const Projects = () => {
       })
   }, [])
 
-  if (projects) {
-    return projects.map(project => {
-      const { id, description, html_url, name, language } = project
-      return (
-        <UlList key={id}>
-          <ProjectCard
-            title={name}
-            language={language}
-            url={html_url}
-            description={description}
-          />
-        </UlList>
-      )
-    })
-  }
+  return (
+    projects.length !== 0 && (
+      <UlList>
+        <ProjectCard cardInfo={projects} />
+      </UlList>
+    )
+  )
 }
 
 export default Projects
