@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
-import { UlList } from "./StyledComponents"
-import ProjectCard from "./ProjectCard"
+import React, { useEffect, useState } from 'react'
+import ProjectCard from './ProjectCard'
+import styled from 'styled-components'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -13,8 +13,8 @@ const Projects = () => {
         const getRepos = data.splice(0, NUMBER_OF_REPOS)
         setProjects(getRepos)
       })
-      .catch(error => {
-        console.log(error)
+      .catch(({ response }) => {
+        throw new Error(response)
       })
   }, [])
 
@@ -26,5 +26,21 @@ const Projects = () => {
     )
   )
 }
+
+const UlList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-decoration: none;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0;
+
+  @media screen and (max-width: 499px) {
+    flex-direction: column;
+    padding: 0;
+  }
+`
 
 export default Projects
