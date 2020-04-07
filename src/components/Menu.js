@@ -1,6 +1,6 @@
-import React from "react"
-import Link from "gatsby-link"
-import styled from "styled-components"
+import React from 'react'
+import Link from 'gatsby-link'
+import styled from 'styled-components'
 
 const MenuList = styled.ul`
   list-style: none;
@@ -15,22 +15,22 @@ const MenuList = styled.ul`
 const Menu = () => (
   <nav
     style={{
-      background: "rgba(0, 0, 0, .8)",
+      background: 'rgba(0, 0, 0, .8)',
     }}
   >
     <MenuList>
       <li>
-        <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
+        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/">
           Home
         </Link>
       </li>
       <li>
-        <Link style={{ textDecoration: "none", color: "#fff" }} to="/about">
+        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/about">
           About
         </Link>
       </li>
       <li>
-        <Link style={{ textDecoration: "none", color: "#fff" }} to="/contact">
+        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/contact">
           Contact
         </Link>
       </li>

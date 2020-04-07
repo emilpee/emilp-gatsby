@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Projects from "../components/Projects"
-import { Container } from "../components/StyledComponents"
+import React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/Layout'
+import SEO from '../components/Seo'
+import Projects from '../components/Projects'
+import { Container } from '../components/Styles'
 
 const IndexPage = () => (
   <Layout>
@@ -11,8 +11,8 @@ const IndexPage = () => (
       <SEO title="Home" />
       <h1>Welcome to my page!</h1>
       <p>
-        This is an upcoming portfolio page for Emil Petersson, a front end
-        developer based in Gothenburg.
+        This is an upcoming portfolio page for Emil Petersson, a front end developer based in
+        Gothenburg.
       </p>
       <Projects />
     </Container>
