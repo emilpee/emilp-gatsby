@@ -37,7 +37,7 @@ const UlList = styled.ul`
   padding: 0.75rem;
   margin: 0;
 
-  @media screen and (max-width: 499px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0;
   }
