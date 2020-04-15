@@ -2,37 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { vueGreen, jsYellow } from './Styles'
+import { red, purple } from '../styles/Styles'
 
 const ProjectCard = ({ cardInfo }) => {
   return cardInfo.map(info => {
-    const { id, html_url, name, description, updated_at, language } = info
-
-    let color
-    switch (language) {
-      case 'JavaScript':
-        color = jsYellow
-        break
-      case 'Vue':
-        color = vueGreen
-        break
-      default:
-        color = '#fff'
-        break
-    }
+    const { id, html_url, name, description, updated_at } = info
 
     return (
       <CardContainer key={id}>
         <CardItem title={`View ${name} on Github`} href={html_url}>
           <Header>
-            <CardHeader style={{ color }}>{name}</CardHeader>
+            <CardHeader style={{ color: red }}>{name}</CardHeader>
             <FontAwesomeIcon
               icon={['fab', 'github']}
               style={{ color: '#222', fontSize: '1.2em' }}
             />
           </Header>
           <p>{description}</p>
-          <small>Last updated {format(new Date(updated_at), 'dd MMMM yyyy')}</small>
+          <small>Last updated {format(new Date(updated_at), 'd MMMM yyyy')}</small>
         </CardItem>
       </CardContainer>
     )
@@ -44,9 +31,15 @@ const CardContainer = styled.li`
   border: 1px thin #555;
   border-radius: 4px;
   box-shadow: 2px 2px 5px #787878;
+  cursor: pointer;
   margin: 0.25rem;
   padding: 0.75rem;
+  transition: all 0.8s ease;
   width: 100%;
+
+  &:hover {
+    background: #ededed;
+  }
 `
 
 const CardItem = styled.a`
@@ -55,7 +48,7 @@ const CardItem = styled.a`
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 350px;
+  min-height: 300px;
   text-decoration: none;
 
   @media screen and (max-width: 768px) {
@@ -65,9 +58,11 @@ const CardItem = styled.a`
 
 const CardHeader = styled.h3`
   font-size: 1.25em;
+  margin: 0;
 `
 
 const Header = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

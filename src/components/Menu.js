@@ -2,40 +2,40 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+const Menu = () => (
+  <MenuList>
+    <MenuItem>
+      <Link style={{ textDecoration: 'none', color: '#fff' }} to="/">
+        Home
+      </Link>
+    </MenuItem>
+    <MenuItem>
+      <Link style={{ textDecoration: 'none', color: '#fff' }} to="/about">
+        About
+      </Link>
+    </MenuItem>
+    <MenuItem>
+      <Link style={{ textDecoration: 'none', color: '#fff' }} to="/contact">
+        Contact
+      </Link>
+    </MenuItem>
+  </MenuList>
+)
+
 const MenuList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   text-decoration: none;
   align-items: center;
-  padding: 0.75rem;
   margin: 0;
+  flex: 1;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
-const Menu = () => (
-  <nav
-    style={{
-      background: 'rgba(0, 0, 0, .8)',
-    }}
-  >
-    <MenuList>
-      <li>
-        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/">
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/about">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link style={{ textDecoration: 'none', color: '#fff' }} to="/contact">
-          Contact
-        </Link>
-      </li>
-    </MenuList>
-  </nav>
-)
+const MenuItem = styled.li``
 
 export default Menu
