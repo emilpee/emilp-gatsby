@@ -1,4 +1,5 @@
 import { Link } from 'gatsby'
+import Menu from './Menu'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -29,6 +30,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Menu />
     </div>
   </header>
 )
