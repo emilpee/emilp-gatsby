@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Emil Petersson`,
-    description: `This is a portfolio page for Emil Petersson, a front end developer based in Gothenburg.`,
+    description: `This is a portfolio page for Emil Petersson, a frontend developer based in Gothenburg, Sweden.`,
     author: `Emil Petersson`,
   },
   plugins: [
