@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    background: #fff;
     font-family: 'Verdana';
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -20,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const Container = styled.div`
-  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
