@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {
+    background: #fff;
     font-family: 'Verdana';
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -39,6 +40,6 @@ export const UlList = styled.ul`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding: 0;
+    padding: 0.5rem;
   }
 `

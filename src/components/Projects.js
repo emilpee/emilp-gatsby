@@ -16,7 +16,7 @@ const Projects = () => {
       .catch(({ response }) => {
         throw new Error(response)
       })
-  }, [])
+  }, [projects])
 
   return (
     projects.length !== 0 && (
