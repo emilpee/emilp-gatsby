@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Emil Petersson`,
-    description: `This is a portfolio page for Emil Petersson, a frontend developer based in Gothenburg, Sweden.`,
+    description: `This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg, Sweden.`,
     author: `Emil Petersson`,
   },
   plugins: [
@@ -27,11 +27,17 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ep-favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ep-favicon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Permanent Marker, Source Sans Pro'],
+          urls: ['/fonts/index.css'],
+        },
+      },
+    },
   ],
 }

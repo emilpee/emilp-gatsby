@@ -2,25 +2,19 @@ import React, { useState } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-const Menu = ({ items }) => {
-  return (
-    <MenuList>
-      {items.map((item, index) => {
-        return (
-          <MenuItem key={index}>
-            <MenuLink
-              onClick={!items[index].isActive ? true : false}
-              style={{ fontWeight: `${items[index].isActive ? 700 : 400}` }}
-              to={item.link}
-            >
-              {item.name}
-            </MenuLink>
-          </MenuItem>
-        )
-      })}
-    </MenuList>
-  )
-}
+const Menu = ({ items }) => (
+  <MenuList>
+    {items.map((item, index) => {
+      return (
+        <MenuItem key={index}>
+          <MenuLink style={{ fontWeight: `${items[index].isActive ? 700 : 400}` }} to={item.link}>
+            {item.name}
+          </MenuLink>
+        </MenuItem>
+      )
+    })}
+  </MenuList>
+)
 
 const MenuList = styled.ul`
   list-style: none;
@@ -37,12 +31,13 @@ const MenuList = styled.ul`
 `
 
 const MenuItem = styled.li`
-  color: #fff;
+  color: #222;
 `
 
 const MenuLink = styled(Link)`
+  font-family: 'Source Sans Pro-SemiBold', sans-serif;
   position: relative;
-  color: #fff;
+  color: #222;
   text-decoration: none;
 
   &:before {
@@ -52,7 +47,7 @@ const MenuLink = styled(Link)`
     height: 3px;
     bottom: -3px;
     left: 0;
-    background: #fff;
+    background: linear-gradient(to right, #ddd, #ccc);
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

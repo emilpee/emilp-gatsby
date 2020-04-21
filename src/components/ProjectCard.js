@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { red, purple } from '../styles/Styles'
+import { purple } from '../styles/Styles'
 
 const ProjectCard = ({ cardInfo }) => {
   return cardInfo.map(info => {
@@ -12,7 +12,7 @@ const ProjectCard = ({ cardInfo }) => {
       <CardContainer key={id}>
         <CardItem title={`View ${name} on Github`} href={html_url}>
           <Header>
-            <CardHeader style={{ color: red }}>{name}</CardHeader>
+            <CardHeader style={{ color: purple }}>{name}</CardHeader>
             <FontAwesomeIcon
               icon={['fab', 'github']}
               style={{ color: '#222', fontSize: '1.2em' }}
@@ -38,7 +38,7 @@ const CardContainer = styled.li`
   width: 100%;
 
   &:hover {
-    background: #ededed;
+    background: #fef;
   }
 `
 

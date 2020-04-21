@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           background: 'linear-gradient(to right, #fff, #ddd)',
-          boxShadow: '2px 1px 3px rgba(0, 0, 0, 0.4)',
+          boxShadow: '2px 1px 4px rgba(0, 0, 0, 0.4)',
           padding: '.75rem',
         }}
       >

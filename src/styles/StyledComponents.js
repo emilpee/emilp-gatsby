@@ -1,21 +1,34 @@
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
+import '../../public/static/fonts/index.css'
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Verdana';
     margin: 0;
+    font-family: 'Source Sans Pro-Regular', 'sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  p, span {
+  p, span, small {
       line-height: 1.5em;
   }
-  
+
   small {
     font-size: .75em;
   }
+
+  h1, h2 {
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
+  }
+
+  h3, h4, h5, h6 {
+    margin: 0; 
+    font-family: 'Source Sans Pro-SemiBold';
+  }
+  
 `
 
 export const Container = styled.div`
