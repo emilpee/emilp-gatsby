@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { purple } from '../styles/Styles'
+import { purple } from '../styles/StyledComponents'
 
 const ProjectCard = ({ cardInfo }) => {
   return cardInfo.map(info => {

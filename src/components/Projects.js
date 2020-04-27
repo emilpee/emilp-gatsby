@@ -16,6 +16,10 @@ const Projects = () => {
       .catch(({ response }) => {
         throw new Error(response)
       })
+      
+      return () => {
+        setProjects([])
+      }
   }, [])
 
   return (

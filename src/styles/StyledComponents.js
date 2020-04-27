@@ -2,6 +2,13 @@ import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import '../../public/static/fonts/index.css'
 
+// Color variables
+export const purple = '#ae4fe6'
+export const red = '#dd3425'
+export const black = '#222'
+
+
+// Global styles
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -29,6 +36,15 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Source Sans Pro-SemiBold';
   }
   
+`
+
+// Styled components
+export const LayoutContainer = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  background: linear-gradient(to right, #fff, #ddd);
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
+  padding: .75rem;
 `
 
 export const Container = styled.div`
