@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
 import { UlList } from '../styles/StyledComponents'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
-  const NUMBER_OF_REPOS = 3
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/emilpee/repos?sort=updated`)
-      .then(response => response.json())
-      .then(data => {
-        const getRepos = data.splice(0, NUMBER_OF_REPOS)
-        setProjects(getRepos)
-      })
-      .catch(({ response }) => {
-        throw new Error(response)
-      })
-      
-      return () => {
-        setProjects([])
+  const gatsbyRepoData = useStaticQuery(graphql`
+    query {
+      github {
+        user(login:"emilpee") {
+          pinnedItems(first: 3, types: [REPOSITORY, GIST]) {
+            totalCount
+            edges {
+              node {
+                ... on GitHub_Repository {
+                  name
+                }
+              }
+            }
+          }
+        }
       }
-  }, [])
+    }
+  `)
 
   return (
     projects.length !== 0 && (
