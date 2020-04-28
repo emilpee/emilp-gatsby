@@ -7,7 +7,7 @@ const Menu = ({ items }) => (
     {items.map((item, index) => {
       return (
         <MenuItem key={index}>
-          <MenuLink style={{ fontWeight: `${items[index].isActive ? 700 : 400}` }} to={item.link}>
+          <MenuLink activeStyle={{ fontWeight: 700 }} to={item.link}>
             {item.name}
           </MenuLink>
         </MenuItem>

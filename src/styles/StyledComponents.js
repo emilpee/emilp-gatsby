@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
-import '../../public/static/fonts/index.css'
+// import '../../public/static/fonts/index.css'
 
 // Color variables
 export const purple = '#ae4fe6'
