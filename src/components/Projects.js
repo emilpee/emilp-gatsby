@@ -1,21 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ProjectCard from './ProjectCard'
 import { UlList } from '../styles/StyledComponents'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const Projects = () => {
-  const [projects, setProjects] = useState([])
 
-  const gatsbyRepoData = useStaticQuery(graphql`
+  const repoData = useStaticQuery(graphql`
     query {
       github {
-        user(login:"emilpee") {
-          pinnedItems(first: 3, types: [REPOSITORY, GIST]) {
+        user(login: "emilpee") {
+          pinnedItems(first: 5, types: [REPOSITORY, GIST]) {
             totalCount
             edges {
               node {
                 ... on GitHub_Repository {
+                  id
                   name
+                  updatedAt
+                  description
+                  url
+                  languages(last: 1, orderBy: {direction: ASC, field: SIZE}) {
+                    nodes {
+                      color
+                      name
+                    }
+                  }
                 }
               }
             }
@@ -26,11 +35,9 @@ const Projects = () => {
   `)
 
   return (
-    projects.length !== 0 && (
       <UlList>
-        <ProjectCard cardInfo={projects} />
+        <ProjectCard cardInfo={repoData} />
       </UlList>
-    )
   )
 }
 

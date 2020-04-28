@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
       <LayoutContainer>
         <main>{children}</main>
         <Footer>
-          © {new Date().getFullYear()} {data.site.siteMetadata.title}
+          © {new Date().getFullYear()} {data.site.siteMetadata.author}
           <div>
             {icons.flatMap((icon, index) => <FaIcon key={index} icon={icon}/>)}
           </div>
