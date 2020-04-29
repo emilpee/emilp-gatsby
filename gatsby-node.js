@@ -8,6 +8,8 @@ exports.sourceNodes = async ({
   const result = await fetch(`https://api.github.com/graphql`)
   const resultData = await result.json()
 
+  console.log(resultData)
+
   // create node for build time data example in the docs
   createNode({
     nameWithOwner: resultData.full_name,

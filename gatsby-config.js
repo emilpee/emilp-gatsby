@@ -1,3 +1,5 @@
+const github = require('./github-config')
+
 module.exports = {
   siteMetadata: {
     title: `Emil`,
@@ -39,5 +41,16 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${github.TOKEN}`,
+        },
+      },
+    },
   ],
 }

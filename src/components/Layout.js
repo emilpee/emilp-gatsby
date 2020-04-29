@@ -12,7 +12,7 @@ import Header from './Header'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { GlobalStyle } from '../styles/StyledComponents'
-import { LayoutContainer } from '../styles/StyledComponents'
+import { LayoutContainer, MenuLink, purple } from '../styles/StyledComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab, faLinkedin, faGithub, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
@@ -44,7 +44,14 @@ const Layout = ({ children }) => {
         <Footer>
           © {new Date().getFullYear()} {data.site.siteMetadata.author}
           <div>
-            {icons.flatMap((icon, index) => <FaIcon key={index} icon={icon}/>)}
+            {icons.flatMap((icon, index) => {
+              return (
+                <MenuLink key={index} to="">
+                  <FaIcon icon={icon}/>
+                </MenuLink>
+              )
+            })
+            }
           </div>
         </Footer>
       </LayoutContainer>
@@ -58,9 +65,10 @@ const FaIcon = styled(FontAwesomeIcon)`
   color: '#222';
   font-size: 1.5em;
   margin: 0 .25rem;
+  transition: all .2s ease;
 
   &:hover {
-
+    color: ${purple}
   }
 `
 
