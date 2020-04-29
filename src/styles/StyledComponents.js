@@ -18,7 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  p, span, small {
+  p, span, small, a {
+      color: #222;
       line-height: 1.5em;
   }
 

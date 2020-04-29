@@ -12,7 +12,7 @@ import Header from './Header'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { GlobalStyle } from '../styles/StyledComponents'
-import { LayoutContainer, MenuLink, purple } from '../styles/StyledComponents'
+import { LayoutContainer, purple } from '../styles/StyledComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab, faLinkedin, faGithub, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
@@ -31,9 +31,9 @@ const Layout = ({ children }) => {
   `)
 
   const icons = [
-    ['fab', 'github'],
-    ['fab', 'linkedin'],
-    ['fab', 'facebook']
+    { type: 'fab', name: 'linkedin', url: 'https://www.linkedin.com/in/emil-petersson-5a042b114/'  },
+    { type: 'fab', name: 'facebook', url: 'https://www.facebook.com/emilpee' },
+    { type: 'fab', name: 'github', url: 'https://github.com/emilpee/'  },
   ] 
 
   return (
@@ -44,11 +44,11 @@ const Layout = ({ children }) => {
         <Footer>
           © {new Date().getFullYear()} {data.site.siteMetadata.author}
           <div>
-            {icons.flatMap((icon, index) => {
+            {icons.map((icon, index) => {
               return (
-                <MenuLink key={index} to="">
-                  <FaIcon icon={icon}/>
-                </MenuLink>
+                <a target='_blank' href={icon.url} title={`Visit me on ${icon.name.charAt(0).toUpperCase() + icon.name.slice(1)}`} key={index}>
+                  <FaIcon icon={[icon.type, icon.name]}/>
+                </a>
               )
             })
             }
