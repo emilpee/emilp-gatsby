@@ -16,6 +16,6 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         contentDigest: createContentDigest(icon),
       },
     }
-    actions.createNode([node])
+    actions.createNode(node)
   })
 }

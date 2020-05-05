@@ -37,7 +37,7 @@ module.exports = {
       options: {
         custom: {
           families: ['Permanent Marker, Source Sans Pro'],
-          urls: ['/fonts/index.css'],
+          urls: ['fonts.css'],
         },
       },
     },
