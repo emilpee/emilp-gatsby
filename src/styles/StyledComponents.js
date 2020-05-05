@@ -12,7 +12,7 @@ export const black = '#222'
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    font-family: 'Source Sans Pro-Regular', 'sans-serif';
+    font-family: 'Source Sans Pro-Regular', 'Arial', 'sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

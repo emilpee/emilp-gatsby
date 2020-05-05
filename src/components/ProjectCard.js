@@ -20,7 +20,7 @@ const ProjectCard = ({ cardInfo }) => {
             />
           </Header>
           <Body>
-            <small style={{ fontWeight: 700 }}>{languages.nodes[0].name}</small>
+            <small>{languages.nodes[0].name}</small>
             <p>{description}</p>
             <small>
               <span>Last updated {format(new Date(updatedAt), 'd MMMM yyyy')}</span>
