@@ -32,15 +32,15 @@ module.exports = {
         icon: `src/images/ep-favicon.png`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     custom: {
-    //       families: ['Permanent Marker, Source Sans Pro'],
-    //       urls: ['/fonts/index.css'],
-    //     },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Permanent Marker, Source Sans Pro'],
+          urls: ['/fonts/index.css'],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-graphql`,
       options: {

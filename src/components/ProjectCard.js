@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectCard = ({ cardInfo }) => {
   const { edges } = cardInfo.github.user.pinnedItems
-  
+
   return edges.map(info => {
     const { id, url, name, description, updatedAt, languages } = info.node
 
@@ -20,7 +20,7 @@ const ProjectCard = ({ cardInfo }) => {
             />
           </Header>
           <Body>
-            <small>{languages.nodes[0].name}</small>
+            <small style={{ fontWeight: 700 }}>{languages.nodes[0].name}</small>
             <p>{description}</p>
             <small>
               <span>Last updated {format(new Date(updatedAt), 'd MMMM yyyy')}</span>
