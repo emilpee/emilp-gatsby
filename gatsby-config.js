@@ -1,6 +1,8 @@
+const github = require('./github-config')
+
 module.exports = {
   siteMetadata: {
-    title: `Emil Petersson`,
+    title: `Emil`,
     description: `This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg, Sweden.`,
     author: `Emil Petersson`,
   },
@@ -30,14 +32,25 @@ module.exports = {
         icon: `src/images/ep-favicon.png`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     custom: {
-    //       families: ['Permanent Marker, Source Sans Pro'],
-    //       urls: ['/fonts/index.css'],
-    //     },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Permanent Marker, Source Sans Pro'],
+          urls: ['fonts.css'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${github.TOKEN}`,
+        },
+      },
+    },
   ],
 }

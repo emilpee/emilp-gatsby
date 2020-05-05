@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { createGlobalStyle } from 'styled-components'
 // import '../../public/static/fonts/index.css'
 
@@ -7,17 +8,17 @@ export const purple = '#ae4fe6'
 export const red = '#dd3425'
 export const black = '#222'
 
-
 // Global styles
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    font-family: 'Source Sans Pro-Regular', 'sans-serif';
+    font-family: 'Source Sans Pro-Regular', 'Arial', 'sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  p, span, small {
+  p, span, small, a {
+      color: #222;
       line-height: 1.5em;
   }
 
@@ -44,7 +45,7 @@ export const LayoutContainer = styled.div`
   max-width: 960px;
   background: linear-gradient(to right, #fff, #ddd);
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
-  padding: .75rem;
+  padding: 0.75rem;
 `
 
 export const Container = styled.div`
@@ -68,5 +69,33 @@ export const UlList = styled.ul`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0.5rem;
+  }
+`
+
+export const MenuLink = styled(Link)`
+  font-family: 'Source Sans Pro-SemiBold', sans-serif;
+  position: relative;
+  color: #222;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(to right, #ddd, #ccc);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 `

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Link from 'gatsby-link'
+import React from 'react'
+import { MenuLink } from '../styles/StyledComponents'
 import styled from 'styled-components'
 
 const Menu = ({ items }) => (
@@ -32,34 +32,6 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   color: #222;
-`
-
-const MenuLink = styled(Link)`
-  font-family: 'Source Sans Pro-SemiBold', sans-serif;
-  position: relative;
-  color: #222;
-  text-decoration: none;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -3px;
-    left: 0;
-    background: linear-gradient(to right, #ddd, #ccc);
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-  }
-
-  &:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
 `
 
 export default Menu

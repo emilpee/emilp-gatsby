@@ -2,23 +2,21 @@ import { Link } from 'gatsby'
 import Menu from './Menu'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { black } from '../styles/StyledComponents'
 
 const Header = ({ siteTitle }) => {
   const links = [
     {
       name: 'Home',
       link: '/',
-      isActive: false,
     },
     {
       name: 'About',
       link: '/about',
-      isActive: false,
     },
     {
       name: 'Contact',
       link: '/contact',
-      isActive: false,
     },
   ]
 
@@ -38,7 +36,7 @@ const Header = ({ siteTitle }) => {
           <Link
             to="/"
             style={{
-              color: `#222`,
+              color: `${black}`,
               textDecoration: `none`,
             }}
           >

@@ -2,24 +2,30 @@ import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { purple } from '../styles/StyledComponents'
 
 const ProjectCard = ({ cardInfo }) => {
-  return cardInfo.map(info => {
-    const { id, html_url, name, description, updated_at } = info
+  const { edges } = cardInfo.github.user.pinnedItems
+
+  return edges.map(info => {
+    const { id, url, name, description, updatedAt, languages } = info.node
 
     return (
       <CardContainer key={id}>
-        <CardItem title={`View ${name} on Github`} href={html_url}>
+        <CardItem title={`View ${name} on Github`} href={url} target="_blank">
           <Header>
-            <CardHeader style={{ color: purple }}>{name}</CardHeader>
+            <CardHeader style={{ color: languages.nodes[0].color }}>{name}</CardHeader>
             <FontAwesomeIcon
               icon={['fab', 'github']}
               style={{ color: '#222', fontSize: '1.2em' }}
             />
           </Header>
-          <p>{description}</p>
-          <small>Last updated {format(new Date(updated_at), 'd MMMM yyyy')}</small>
+          <Body>
+            <small>{languages.nodes[0].name}</small>
+            <p>{description}</p>
+            <small>
+              <span>Last updated {format(new Date(updatedAt), 'd MMMM yyyy')}</span>
+            </small>
+          </Body>
         </CardItem>
       </CardContainer>
     )
@@ -59,6 +65,14 @@ const CardItem = styled.a`
 const CardHeader = styled.h3`
   font-size: 1.25em;
   margin: 0;
+`
+
+const Body = styled.div`
+  align-items: flex-start;
+  display: flex;
+  flex: 10;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Header = styled.div`

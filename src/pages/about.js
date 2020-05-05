@@ -7,7 +7,7 @@ const AboutPage = () => (
   <Layout>
     <Container>
       <SEO title="about" />
-      <h1>About me</h1>
+      <h2>About me</h2>
       <p>
         Löksås ipsum hav gör dag själv precis från bäckasiner hav samma, och mot mjuka att se helt
         omfångsrik gamla och ingalunda, sista sax sällan tre som dock ingalunda kunde sällan. Stora
