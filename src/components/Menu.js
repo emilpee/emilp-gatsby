@@ -1,5 +1,5 @@
 import React from 'react'
-import { MenuLink } from '../styles/StyledComponents'
+import { MenuLink, purple } from '../styles/StyledComponents'
 import styled from 'styled-components'
 
 const Menu = ({ items }) => (
@@ -7,7 +7,10 @@ const Menu = ({ items }) => (
     {items.map((item, index) => {
       return (
         <MenuItem key={index}>
-          <MenuLink activeStyle={{ fontWeight: 700 }} to={item.link}>
+          <MenuLink
+            activeStyle={{ color: purple, borderBottom: `3px solid ${purple}` }}
+            to={item.link}
+          >
             {item.name}
           </MenuLink>
         </MenuItem>
