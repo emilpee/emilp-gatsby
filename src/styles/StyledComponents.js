@@ -36,6 +36,11 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0; 
     font-family: 'Source Sans Pro-SemiBold';
   }
+
+  ::selection {
+    background: #CB70FF;
+    color: #fff;
+  }
   
 `
 
@@ -85,12 +90,12 @@ export const MenuLink = styled(Link)`
     height: 3px;
     bottom: -3px;
     left: 0;
-    background: linear-gradient(to right, #ddd, #ccc);
+    background: ${purple};
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   &:hover:before {
