@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
 export const LayoutContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  background: linear-gradient(to right, #fff, #ddd);
+  background: linear-gradient(to right, #eaeaea, #fff, #fff, #eaeaea);
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
   padding: 0.75rem;
 `

@@ -3,12 +3,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-// TODO: import higher quality img
-
-const Image = () => {
+const ProfileImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "emil.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "emil.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -19,18 +17,20 @@ const Image = () => {
   `)
 
   return (
-    <ProfileImg
-      alt={'Picture of Emil Petersson'}
-      fluid={data.placeholderImage.childImageSharp.fluid}
-    />
+    <>
+      <ProfileImg
+        alt={'Picture of Emil Petersson'}
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      />
+    </>
   )
 }
 
 const ProfileImg = styled(Img)`
-  border-radius: 9999rem;
-  box-shadow: 3px 6px 8px #777;
+  background: #fff;
+  border-radius: 20px;
   margin-top: 0.5rem;
-  width: 200px;
+  width: 300px;
 `
 
-export default Image
+export default ProfileImage

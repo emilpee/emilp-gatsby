@@ -7,7 +7,7 @@ const ContactPage = () => (
   <Layout>
     <Container>
       <SEO title="contact" />
-      <h2>Contact</h2>
+      <h1>Contact</h1>
       <p>
         Löksås ipsum hav gör dag själv precis från bäckasiner hav samma, och mot mjuka att se helt
         omfångsrik gamla och ingalunda, sista sax sällan tre som dock ingalunda kunde sällan. Stora

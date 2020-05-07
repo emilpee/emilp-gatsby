@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <Container>
       <SEO title="Home" />
-      <h2>Welcome to my page</h2>
+      <h1>Welcome to my page</h1>
       <p>
         This is an upcoming portfolio page for Emil Petersson, a front end developer based in
         Gothenburg.

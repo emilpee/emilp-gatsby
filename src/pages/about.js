@@ -2,15 +2,15 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { Container } from '../styles/StyledComponents'
-import Image from '../components/Image'
+import ProfileImage from '../components/ProfileImage'
 
 const AboutPage = () => {
   return (
     <Layout>
       <Container>
         <SEO title="about" />
-        <h2>About me</h2>
-        <Image />
+        <h1>About me</h1>
+        <ProfileImage />
         <p>
           Löksås ipsum hav gör dag själv precis från bäckasiner hav samma, och mot mjuka att se helt
           omfångsrik gamla och ingalunda, sista sax sällan tre som dock ingalunda kunde sällan.
