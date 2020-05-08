@@ -1,4 +1,5 @@
 const github = require('./github-config')
+const contentful = require('./contentful-config')
 
 module.exports = {
   siteMetadata: {
@@ -50,6 +51,13 @@ module.exports = {
         headers: {
           Authorization: `Bearer ${github.TOKEN}`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: contentful.SPACE_ID,
+        accessToken: contentful.ACCESS_TOKEN,
       },
     },
   ],

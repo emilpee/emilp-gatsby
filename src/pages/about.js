@@ -1,7 +1,7 @@
 import React from 'react'
+import { Container } from '../styles/StyledComponents'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
-import { Container } from '../styles/StyledComponents'
 import ProfileImage from '../components/ProfileImage'
 
 const AboutPage = () => {
