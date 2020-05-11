@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { lightPurple } from '../styles/StyledComponents'
 import styled from 'styled-components'
 
 const ProfileImage = () => {
@@ -29,9 +28,8 @@ const ProfileImage = () => {
 
 const ProfileImg = styled(Img)`
   background: #fff;
-  border-radius: 888rem;
-  border: 3px #222 solid;
-  box-shadow: 5px 3px 12px #777;
+  border-radius: 0.75rem;
+  box-shadow: 2px 5px 8px #777;
   height: 300px;
   margin-top: 1rem;
   width: 300px;

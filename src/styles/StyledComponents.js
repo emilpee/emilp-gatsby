@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { createGlobalStyle } from 'styled-components'
-// import '../../public/static/fonts/index.css'
 
 // Color variables
 export const purple = '#ae4fe6'
@@ -20,15 +19,21 @@ export const GlobalStyle = createGlobalStyle`
 
   p, span, small, a {
       color: #222;
-      line-height: 1.5em;
+      line-height: 1.75em;
   }
 
   small {
     font-size: .75em;
   }
 
-  h1, h2 {
+  h1 {
     margin: 0;
+    letter-spacing: 1.5px;
+    font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
+  }
+
+  h2 {
+    margin-top: 2rem;
     letter-spacing: 1.5px;
     font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
   }

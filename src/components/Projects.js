@@ -4,7 +4,6 @@ import { UlList } from '../styles/StyledComponents'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const Projects = () => {
-
   const repoData = useStaticQuery(graphql`
     query {
       github {
@@ -19,7 +18,7 @@ const Projects = () => {
                   updatedAt
                   description
                   url
-                  languages(last: 1, orderBy: {direction: ASC, field: SIZE}) {
+                  languages(last: 1, orderBy: { direction: ASC, field: SIZE }) {
                     nodes {
                       color
                       name
@@ -35,9 +34,12 @@ const Projects = () => {
   `)
 
   return (
+    <>
+      <h2>Projects</h2>
       <UlList>
         <ProjectCard cardInfo={repoData} />
       </UlList>
+    </>
   )
 }
 
