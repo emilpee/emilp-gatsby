@@ -6,14 +6,14 @@ const Menu = ({ items }) => (
   <MenuList>
     {items.map((item, index) => {
       return (
-        <MenuItem key={index}>
+        <MenuListItem key={index}>
           <MenuLink
             activeStyle={{ color: purple, borderBottom: `3px solid ${purple}` }}
             to={item.link}
           >
             {item.name}
           </MenuLink>
-        </MenuItem>
+        </MenuListItem>
       )
     })}
   </MenuList>
@@ -33,7 +33,7 @@ const MenuList = styled.ul`
   }
 `
 
-const MenuItem = styled.li`
+const MenuListItem = styled.li`
   color: #222;
 `
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
+import { lightPurple } from '../styles/StyledComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectCard = ({ cardInfo }) => {
@@ -44,12 +45,11 @@ const CardContainer = styled.li`
   width: 100%;
 
   &:hover {
-    background: #fef;
+    background: ${lightPurple};
   }
 `
 
 const CardItem = styled.a`
-  color: #222;
   display: flex;
   height: 100%;
   flex-direction: column;

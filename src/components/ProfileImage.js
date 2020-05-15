@@ -8,7 +8,7 @@ const ProfileImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "emil.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,10 +29,10 @@ const ProfileImage = () => {
 const ProfileImg = styled(Img)`
   background: #fff;
   border-radius: 0.75rem;
-  box-shadow: 2px 5px 8px #777;
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
   height: 300px;
   margin-top: 1rem;
-  width: 300px;
+  width: 250px;
 `
 
 export default ProfileImage
