@@ -10,6 +10,7 @@ export const black = '#222'
 
 // Global styles
 export const GlobalStyle = createGlobalStyle`
+
   body {
     margin: 0;
     font-family: 'Source Sans Pro-Regular', 'Arial', 'sans-serif';
@@ -53,10 +54,9 @@ export const GlobalStyle = createGlobalStyle`
 // Styled components
 export const LayoutContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1024px;
   background: linear-gradient(to right, #eaeaea, #fff, #fff, #eaeaea);
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
-  padding: 0.75rem;
 `
 
 export const Container = styled.div`
@@ -64,7 +64,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem 0.75rem;
 `
 
 export const UlList = styled.ul`
@@ -87,6 +87,7 @@ export const MenuLink = styled(Link)`
   font-family: 'Source Sans Pro-SemiBold', sans-serif;
   position: relative;
   color: #222;
+  margin-left: 2.5rem;
   text-decoration: none;
 
   &:before {

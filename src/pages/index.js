@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import Projects from '../components/Projects'
-import { Container, MenuLink } from '../styles/StyledComponents'
+import { Container, MenuLink, purple } from '../styles/StyledComponents'
 
 const IndexPage = () => (
   <Layout>
@@ -13,11 +14,18 @@ const IndexPage = () => (
         This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg.{' '}
       </p>
       <span>
-        Want to know more about me? <MenuLink to="/about">Find out here</MenuLink>.
+        Want to know more about me?{' '}
+        <Link style={{ color: purple }} to="/about">
+          Find out here
+        </Link>
+        .
       </span>
       <span>
         If you want to send an inquiry, feel free to use my{' '}
-        <MenuLink to="/contact">contact form</MenuLink>.
+        <Link style={{ color: purple }} to="/contact">
+          contact form
+        </Link>
+        .
       </span>
       <Projects />
     </Container>

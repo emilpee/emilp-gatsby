@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      © {new Date().getFullYear()} Emil Petersson
+      <span>© {new Date().getFullYear()} Emil Petersson</span>
       <div>
         {allIcons.map(icon => {
           const { name, url, type } = icon
@@ -59,5 +59,6 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1rem;
 `
 export default Footer
