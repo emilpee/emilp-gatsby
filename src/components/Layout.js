@@ -27,20 +27,20 @@ const Layout = ({ children }) => {
           author
         }
       }
-      file(base: { eq: "test.jpg" }) {
+      file(base: { eq: "background.jpg" }) {
         publicURL
       }
     }
   `)
 
   const Background = styled.div`
-    background: url(${data.file ? data.file.publicURL : '../images/test.jpg'}) no-repeat center
-      center fixed;
+    background: url(${data.file ? data.file.publicURL : '../images/background.jpg'}) no-repeat
+      center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
   `
 
   return (
