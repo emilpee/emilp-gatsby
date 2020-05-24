@@ -1,26 +1,30 @@
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Menu from './Menu'
-import PropTypes from 'prop-types'
-import React from 'react'
+import BurgerMenu from './BurgerMenu'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { black, lightPurple } from '../styles/StyledComponents'
+import { black } from '../styles/StyledComponents'
+
+
 
 const Header = () => {
-  const links = [
-    {
-      name: 'Home',
-      link: '/',
-    },
-    {
-      name: 'About',
-      link: '/about',
-    },
-    {
-      name: 'Contact',
-      link: '/contact',
-    },
-  ]
-
+  const [showMenu, setShowMenu] = useState(false)
+  const handleMenuClick = () => {
+    showMenu ? setShowMenu(false) : setShowMenu(true)
+  }
+  const links = useStaticQuery(
+    graphql`  
+      query {
+        allInternalLink {
+          nodes {
+            id
+            url
+            name
+          }
+        }
+      }
+    ` 
+  )
   return (
     <HeaderContainer>
       <h1 style={{ margin: 0, flex: 1, fontSize: 42, textShadow: '2px 2px #fff' }}>
@@ -35,6 +39,7 @@ const Header = () => {
         </Link>
       </h1>
       <Menu style={{ flex: 2 }} items={links} />
+      <BurgerMenu handleMenuClick={handleMenuClick} showMenu={showMenu} items={links} />
     </HeaderContainer>
   )
 }
