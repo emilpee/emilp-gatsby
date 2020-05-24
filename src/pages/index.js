@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import Projects from '../components/Projects'
-import { Container, MenuLink, purple } from '../styles/StyledComponents'
+import { Container, InternalLink } from '../styles/StyledComponents'
+
 
 const IndexPage = () => (
   <Layout>
@@ -15,16 +15,16 @@ const IndexPage = () => (
       </p>
       <span>
         Want to know more about me?{' '}
-        <Link style={{ color: purple }} to="/about">
+        <InternalLink to="/about">
           Find out here
-        </Link>
+        </InternalLink>
         .
       </span>
       <span>
         If you want to send an inquiry, feel free to use my{' '}
-        <Link style={{ color: purple }} to="/contact">
+        <InternalLink to="/contact">
           contact form
-        </Link>
+        </InternalLink>
         .
       </span>
       <Projects />

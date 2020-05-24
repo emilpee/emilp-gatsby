@@ -19,8 +19,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p, span, small, a {
-      color: #222;
+      color: ${black};
       line-height: 1.75em;
+      text-decoration: none;
   }
 
   small {
@@ -83,10 +84,19 @@ export const UlList = styled.ul`
   }
 `
 
+export const InternalLink = styled(Link)`
+  color: ${lightPurple};
+  transition: color .2s ease;
+
+  &:hover {
+    color: ${purple};
+  }
+`
+
 export const MenuLink = styled(Link)`
   font-family: 'Source Sans Pro-SemiBold', sans-serif;
   position: relative;
-  color: #222;
+  color: ${black};
   margin-left: 2.5rem;
   text-decoration: none;
 
