@@ -5,15 +5,43 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     { type: 'fab', name: 'github', url: 'https://github.com/emilpee/' },
   ]
 
+  const links = [
+    {
+      name: 'Home',
+      link: '/',
+    },
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+  ]
+
   icons.forEach(icon => {
     const node = {
+      id: createNodeId(`FontAwesome-${icon.name}`),
       type: icon.type,
       name: icon.name,
-      id: createNodeId(`FontAwesome-${icon.name}`),
       url: icon.url,
       internal: {
         type: 'fontAwesomeIcon',
         contentDigest: createContentDigest(icon),
+      },
+    }
+    actions.createNode(node)
+  })
+
+  links.forEach((link, index) => {
+    const node = {
+      id: createNodeId(index),
+      name: link.name,
+      url: link.link,
+      internal: {
+        type: 'internalLink',
+        contentDigest: createContentDigest(link),
       },
     }
     actions.createNode(node)
