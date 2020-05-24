@@ -41,6 +41,11 @@ const Layout = ({ children }) => {
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
+    padding-bottom: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 0;
+    }
   `
 
   return (

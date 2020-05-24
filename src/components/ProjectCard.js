@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
-import { lightPurple } from '../styles/StyledComponents'
+import { black } from '../styles/StyledComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectCard = ({ cardInfo }) => {
@@ -17,7 +17,7 @@ const ProjectCard = ({ cardInfo }) => {
             <CardHeader style={{ color: languages.nodes[0].color }}>{name}</CardHeader>
             <FontAwesomeIcon
               icon={['fab', 'github']}
-              style={{ color: '#222', fontSize: '1.2em' }}
+              style={{ color: `${black}`, fontSize: '1.2em' }}
             />
           </Header>
           <Body>
@@ -35,9 +35,8 @@ const ProjectCard = ({ cardInfo }) => {
 
 const CardContainer = styled.li`
   background: #fff;
-  border: 1px thin #555;
+  border: solid thin #ddd;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px #787878;
   cursor: pointer;
   margin: 0.25rem;
   padding: 0.75rem;
@@ -45,7 +44,7 @@ const CardContainer = styled.li`
   width: 100%;
 
   &:hover {
-    background: ${lightPurple};
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.6);
   }
 `
 

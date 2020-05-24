@@ -27,8 +27,8 @@ const ProfileImage = () => {
 }
 
 const ProfileImg = styled(Img)`
-  background: #fff;
-  border-radius: 0.75rem;
+  background: #fefefe;
+  border-radius: 4px;
   box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
   height: 300px;
   margin-top: 1rem;

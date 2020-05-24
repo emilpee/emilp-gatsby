@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={`${title.charAt(0).toUpperCase() + title.slice(1)}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
