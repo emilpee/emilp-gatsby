@@ -4,14 +4,14 @@ import styled from 'styled-components'
 
 const Menu = ({ items }) => (
   <MenuList>
-    {items.map((item, index) => {
+    {items.allInternalLink.nodes.map((link) => {
       return (
-        <MenuListItem key={index}>
+        <MenuListItem key={link.id}>
           <MenuLink
             activeStyle={{ color: purple, borderBottom: `3px solid ${purple}` }}
-            to={item.link}
+            to={link.url}
           >
-            {item.name}
+            {link.name}
           </MenuLink>
         </MenuListItem>
       )
