@@ -1,58 +1,7 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { createGlobalStyle } from 'styled-components'
+import { purple, black, lightPurple } from './colors'
 
-// Color variables
-export const purple = '#ae4fe6'
-export const lightPurple = '#CB70FF'
-export const red = '#dd3425'
-export const black = '#222'
-
-// Global styles
-export const GlobalStyle = createGlobalStyle`
-
-  body {
-    margin: 0;
-    font-family: 'Source Sans Pro-Regular', 'Arial', 'sans-serif';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  p, span, small, a {
-      color: ${black};
-      line-height: 1.75em;
-      text-decoration: none;
-  }
-
-  small {
-    font-size: .75em;
-  }
-
-  h1 {
-    margin: 0;
-    letter-spacing: 1.5px;
-    font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
-  }
-
-  h2 {
-    margin-top: 2rem;
-    letter-spacing: 1.5px;
-    font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
-  }
-
-  h3, h4, h5, h6 {
-    margin: 0; 
-    font-family: 'Source Sans Pro-SemiBold';
-  }
-
-  ::selection {
-    background: ${purple};
-    color: #fff;
-  }
-  
-`
-
-// Styled components
 export const LayoutContainer = styled.div`
   margin: 0 auto;
   max-width: 1024px;
@@ -86,7 +35,7 @@ export const UlList = styled.ul`
 
 export const InternalLink = styled(Link)`
   color: ${lightPurple};
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 
   &:hover {
     color: ${purple};
