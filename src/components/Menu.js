@@ -1,10 +1,11 @@
 import React from 'react'
-import { MenuLink, purple } from '../styles/StyledComponents'
+import { MenuLink } from '../styles/StyledComponents'
+import { purple } from '../styles/colors'
 import styled from 'styled-components'
 
 const Menu = ({ items }) => (
   <MenuList>
-    {items.allInternalLink.nodes.map((link) => {
+    {items.allInternalLink.nodes.map(link => {
       return (
         <MenuListItem key={link.id}>
           <MenuLink

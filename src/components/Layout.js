@@ -12,7 +12,7 @@ import Header from './Header'
 import Footer from './Footer'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { GlobalStyle } from '../styles/StyledComponents'
+import { GlobalStyle } from '../styles/GlobalStyles'
 import { LayoutContainer } from '../styles/StyledComponents'
 import { fab, faLinkedin, faGithub, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
@@ -48,14 +48,21 @@ const Layout = ({ children }) => {
     }
   `
 
+  const MainContainer = styled.div`
+    max-width: 1024px;
+    margin: 0 auto;
+  `
+
   return (
     <Background>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <LayoutContainer>
-        <main>{children}</main>
-        <Footer />
-      </LayoutContainer>
-      <GlobalStyle />
+      <MainContainer>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <LayoutContainer>
+          <main>{children}</main>
+          <Footer />
+        </LayoutContainer>
+        <GlobalStyle />
+      </MainContainer>
     </Background>
   )
 }

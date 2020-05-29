@@ -3,9 +3,7 @@ import Menu from './Menu'
 import BurgerMenu from './BurgerMenu'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { black } from '../styles/StyledComponents'
-
-
+import { black } from '../styles/colors'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -13,7 +11,7 @@ const Header = () => {
     showMenu ? setShowMenu(false) : setShowMenu(true)
   }
   const links = useStaticQuery(
-    graphql`  
+    graphql`
       query {
         allInternalLink {
           nodes {
@@ -23,7 +21,7 @@ const Header = () => {
           }
         }
       }
-    ` 
+    `
   )
   return (
     <HeaderContainer>
@@ -38,7 +36,7 @@ const Header = () => {
           Emil
         </Link>
       </h1>
-      <Menu style={{ flex: 2 }} items={links} />
+      <Menu style={{ flex: 1 }} items={links} />
       <BurgerMenu handleMenuClick={handleMenuClick} showMenu={showMenu} items={links} />
     </HeaderContainer>
   )
@@ -48,8 +46,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  max-width: 1024px;
+  padding: 0.5rem 0rem;
   margin: 0 auto;
 `
 

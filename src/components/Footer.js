@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { purple } from '../styles/StyledComponents'
+import { purple } from '../styles/colors'
 import { useStaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -44,7 +44,7 @@ const Footer = () => {
 }
 
 const FaIcon = styled(FontAwesomeIcon)`
-  color: '#222';
+  color: #222;
   font-size: 1.5em;
   margin: 0 0.25rem;
   transition: all 0.2s ease;
@@ -59,6 +59,11 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+
+  & span {
+    color: #222;
+  }
 `
 export default Footer
