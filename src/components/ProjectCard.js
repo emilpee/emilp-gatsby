@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { format } from 'date-fns'
-import { black } from '../styles/StyledComponents'
+import { black } from '../styles/colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectCard = ({ cardInfo }) => {
@@ -37,11 +37,11 @@ const CardContainer = styled.li`
   background: #fff;
   border: solid thin #ddd;
   border-radius: 4px;
+  height: 100%;
   cursor: pointer;
   margin: 0.25rem;
   padding: 0.75rem;
   transition: all 0.8s ease;
-  width: 100%;
 
   &:hover {
     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.6);
@@ -50,10 +50,9 @@ const CardContainer = styled.li`
 
 const CardItem = styled.a`
   display: flex;
-  height: 100%;
   flex-direction: column;
+  height: 100%;
   justify-content: space-between;
-  min-height: 300px;
   text-decoration: none;
 
   @media screen and (max-width: 768px) {
