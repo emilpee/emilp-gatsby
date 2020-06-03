@@ -2,16 +2,16 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import Projects from '../components/Projects'
-import { Container, InternalLink } from '../styles/StyledComponents'
+import { Container, InternalLink, PageHeader, Text } from '../styles/StyledComponents'
 
 const IndexPage = () => (
   <Layout>
     <Container>
       <SEO title="Home" />
-      <h1>Welcome to my page</h1>
-      <p>
+      <PageHeader>Welcome to my page</PageHeader>
+      <Text>
         This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg.{' '}
-      </p>
+      </Text>
       <div>
         Want to know more about me? <InternalLink to="/about">Find out here</InternalLink>.
       </div>

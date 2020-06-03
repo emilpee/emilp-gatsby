@@ -42,6 +42,14 @@ export const InternalLink = styled(Link)`
   }
 `
 
+export const Text = styled.p`
+  margin: 1.75rem 0;
+`
+
+export const PageHeader = styled.h1`
+  margin: 1rem;
+`
+
 export const MenuLink = styled(Link)`
   font-family: 'Source Sans Pro-SemiBold', sans-serif;
   position: relative;
