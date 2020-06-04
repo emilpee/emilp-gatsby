@@ -25,7 +25,7 @@ const Header = () => {
   )
   return (
     <HeaderContainer>
-      <h1 style={{ margin: 0, flex: 1, fontSize: 42, textShadow: '2px 2px #fff' }}>
+      <Title>
         <Link
           to="/"
           style={{
@@ -35,18 +35,24 @@ const Header = () => {
         >
           Emil
         </Link>
-      </h1>
-      <Menu style={{ flex: 1 }} items={links} />
+      </Title>
+      <Menu items={links} />
       <BurgerMenu handleMenuClick={handleMenuClick} showMenu={showMenu} items={links} />
     </HeaderContainer>
   )
 }
 
+const Title = styled.h1`
+  margin: 0;
+  font-size: 44px;
+  text-shadow: 2px 2px #fff;
+`
+
 const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
+  height: 4rem;
   justify-content: space-between;
-  padding: 0.5rem 0rem;
   margin: 0 auto;
 `
 

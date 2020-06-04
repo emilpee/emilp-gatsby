@@ -23,10 +23,10 @@ const Menu = ({ items }) => (
 const MenuList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   text-decoration: none;
+  min-height: 4rem;
   align-items: center;
-  margin: 0;
   flex: 1;
 
   @media screen and (max-width: 768px) {
@@ -36,6 +36,7 @@ const MenuList = styled.ul`
 
 const MenuListItem = styled.li`
   color: #222;
+  margin-left: 2.5rem;
 `
 
 export default Menu

@@ -44,8 +44,8 @@ const AboutPage = () => {
           </Text>
           <Text>
             In addition to developing, I am very fond of music. I have been a bass player for many
-            years and has started learning to play the piano. In addition to that, I like to spend
-            my time on reading, traveling and exploring new environments. I’m also interested in
+            years and have started learning to play the piano. In addition to that, I like to spend
+            my time reading, traveling and exploring new environments. I’m also interested in
             society and politics and have a penchant for quizzes and peanuts.
           </Text>
         </TextContainer>

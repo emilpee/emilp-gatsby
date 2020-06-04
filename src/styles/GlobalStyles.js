@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    margin-top: 2rem;
+    margin: 2rem;
     letter-spacing: 1.5px;
     font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
   }
