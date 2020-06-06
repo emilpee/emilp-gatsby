@@ -61,7 +61,7 @@ const HeaderContainer = styled.div`
   
   @media screen and (max-width: 768px) {
     justify-content: space-between;
-    padding: 0;
+    padding: 1rem 0;
     width: 100vw;
   }
 `
