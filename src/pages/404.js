@@ -25,6 +25,7 @@ const NotFoundPage = () => {
         <img
           style={{ filter: 'contrast(1.5)' }}
           src={data.placeholderImage.childImageSharp.fluid.src}
+          alt="404"
         />
       </Container>
     </Layout>

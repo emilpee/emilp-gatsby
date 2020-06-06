@@ -5,7 +5,7 @@ import { black } from '../styles/colors'
 
 const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
   <BurgerMenuContainer>
-    <div>
+    <div style={{ width: '100vw', marginTop: '.5rem' }}>
       <Input
         onClick={handleMenuClick}
         true-value="yes"
@@ -16,34 +16,33 @@ const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
       <label style={{ cursor: 'pointer', padding: '1rem' }} htmlFor="responsive-menu">
         <BurgerIcon isShown={showMenu} id="menu-icon" />
       </label>
-      <Overlay isShown={showMenu} />
-      {showMenu &&
-        items.allInternalLink.nodes.map(link => {
-          return (
-            <Nav key={link.id}>
-              <Link style={{ color: '#fff' }} to={link.url}>
-                {link.name}
-              </Link>
-            </Nav>
-          )
+      <Overlay isShown={showMenu}>
+      <Nav>
+        {showMenu &&
+          items.allInternalLink.nodes.map(link => {
+            return (
+                <Link style={{ color: '#fff', fontSize: '1.5em' }} to={link.url}>
+                  {link.name}
+                </Link>
+            )
         })}
+      </Nav>
+      </Overlay>
     </div>
   </BurgerMenuContainer>
 )
 
 const BurgerMenuContainer = styled.nav`
-  display: none;
   color: ${black};
+  display: none;
+  left: 0;
+  min-height: 3.3rem;
   overflow: hidden;
   position: fixed;
   top: 0;
-  right: 0;
-  min-height: 3.2rem;
-  padding: 1rem;
-  align-items: center;
-  justify-content: flex-end;
   width: 100%;
   z-index: 9999;
+
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -54,15 +53,16 @@ const Overlay = styled.div`
   ${({ isShown }) =>
     isShown &&
     `       
-            background: ${black};
-            bottom: 0;
-            height: 100vh;
-            left: 0;
-            right: 0;
-            position: fixed;
-            top: 0;
-            z-index: -1;
-        `}
+      background: ${black};
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      z-index: -1;
+    `}
 `
 
 const Input = styled.input`
@@ -84,21 +84,21 @@ const Input = styled.input`
 `
 
 const BurgerIcon = styled.span`
+  background: #fff;
   display: inline-block;
+  height: 0.15em;
   max-width: 1.5rem;
   position: relative;
-  background: #fff;
-  height: 0.15em;
   transition: all 0.2s ease-in-out;
   width: 100%;
 
   &:before,
   &:after {
-    content: '';
-    right: 0;
-    position: absolute;
     background: #fff;
-    height: 0.15rem;
+    content: '';
+    height: 0.15em;
+    position: absolute;
+    right: 0;
     transition: all 0.2s ease-in-out;
     width: 100%;
   }
@@ -127,12 +127,13 @@ const BurgerIcon = styled.span`
 `
 
 const Nav = styled.ul`
-  font-size: 1.5em;
-  color: #fff;
-  height: 100vh;
-  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  color: #fff;
+  display: flex;
+  font-size: 1.5em;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-top: -2rem !important;
   padding: 0;
 `

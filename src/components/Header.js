@@ -46,14 +46,21 @@ const Title = styled.h1`
   margin: 0;
   font-size: 44px;
   text-shadow: 2px 2px #fff;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
 `
 
 const HeaderContainer = styled.div`
   align-items: center;
   display: flex;
-  height: 4rem;
-  justify-content: space-between;
-  margin: 0 auto;
+  max-height: 4rem;
+  padding: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 `
 
 export default Header
