@@ -57,9 +57,12 @@ const HeaderContainer = styled.div`
   display: flex;
   max-height: 4rem;
   padding: 0 1rem;
-
+  position: relative;
+  
   @media screen and (max-width: 768px) {
     justify-content: space-between;
+    padding: 0;
+    width: 100vw;
   }
 `
 

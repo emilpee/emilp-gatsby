@@ -75,5 +75,6 @@ const FooterContainer = styled.footer`
     color: ${black};
     font-size: 0.8em;
   }
+
 `
 export default Footer

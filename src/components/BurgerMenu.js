@@ -13,7 +13,7 @@ const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
         id="responsive-menu"
         type="checkbox"
       />
-      <label style={{ cursor: 'pointer', padding: '1rem' }} htmlFor="responsive-menu">
+      <label style={{ cursor: 'pointer', padding: '.75rem' }} htmlFor="responsive-menu">
         <BurgerIcon isShown={showMenu} id="menu-icon" />
       </label>
       <Overlay isShown={showMenu}>
@@ -35,11 +35,12 @@ const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
 const BurgerMenuContainer = styled.nav`
   color: ${black};
   display: none;
-  left: 0;
+  right: 0;
   min-height: 3.3rem;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 88%;
   width: 100%;
   z-index: 9999;
 

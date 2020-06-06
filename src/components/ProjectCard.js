@@ -40,7 +40,6 @@ const CardContainer = styled.li`
   border-radius: 4px;
   height: 100%;
   cursor: pointer;
-  margin: 0.25rem;
   padding: 0.75rem;
   transition: all 0.8s ease;
 

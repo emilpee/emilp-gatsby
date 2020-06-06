@@ -8,17 +8,17 @@ const IndexPage = () => (
   <Layout>
     <Container>
       <SEO title="Home" />
-      <PageHeader>Welcome to my page</PageHeader>
-      <Text>
+      <PageHeader>Hello there!</PageHeader>
+      <Text style={{ margin: '.75rem' }}>
         This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg.{' '}
       </Text>
-      <div>
+      <Text style={{ margin: '.75rem' }}>
         Want to know more about me? <InternalLink to="/about">Find out here</InternalLink>.
-      </div>
-      <div>
+      </Text>
+      <Text style={{ margin: '.75rem' }}>
         If you want to send an inquiry, feel free to use my{' '}
         <InternalLink to="/contact">contact form</InternalLink>.
-      </div>
+      </Text>
       <Projects />
     </Container>
   </Layout>

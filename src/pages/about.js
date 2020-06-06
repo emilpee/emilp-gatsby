@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { Container, Text, PageHeader } from '../styles/StyledComponents'
-import { purple } from '../styles/colors'
+import { purple, lightPurple } from '../styles/colors'
 import ProfileImage from '../components/ProfileImage'
 
 const AboutPage = () => {
@@ -14,10 +14,6 @@ const AboutPage = () => {
         <PageHeader>About me</PageHeader>
         <ProfileImage />
         <TextContainer>
-          <BlockQuote>
-            "I took responsibility for the CSS part and noticed that it was something that could
-            have suited me."
-          </BlockQuote>
           <Text>
             I come from a small village called Jämjö in southern Sweden. I started my career as a
             journalist, but realized relatively quickly after graduation that maybe it was not
@@ -32,6 +28,10 @@ const AboutPage = () => {
             curiosity I took responsibility for the CSS part and noticed that it was something that
             could have suited me.
           </Text>
+          <BlockQuote>
+            "I took responsibility for the CSS part and noticed that it was something that could
+            have suited me."
+          </BlockQuote>
           <Text>
             These thoughts were put on ice for a couple of years, but in the spring of 2018 I
             regained my interest and also started to write some basic JavaScript code. In my
@@ -64,15 +64,15 @@ const TextContainer = styled.div`
 `
 
 const BlockQuote = styled.blockquote`
-  border-bottom: 2px groove ${purple};
-  border-top: 2px groove ${purple};
+  border-bottom: 1px solid ${purple};
+  border-top: 1px solid ${purple};
   font-weight: 500;
   font-size: 32px;
   padding: 1.5rem 0;
   line-height: 1.6em;
   text-align: center;
   margin: 2rem auto;
-  color: ${purple};
+  color: ${lightPurple};
   width: 100%;
 `
 
