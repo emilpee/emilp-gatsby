@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.2em;
-    font-family: 'Source Sans Pro-Regular', 'Arial', 'sans-serif';
+    font-family: 'Source Sans Pro-Regular', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -15,6 +15,10 @@ export const GlobalStyle = createGlobalStyle`
       color: ${black};
       line-height: 1.75em;
       text-decoration: none;
+  }
+
+  label {
+    font-family: 'Permanent Marker', sans-serif;
   }
 
   small {
