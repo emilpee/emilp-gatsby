@@ -13,7 +13,6 @@ import Footer from './Footer'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { GlobalStyle } from '../styles/GlobalStyles'
-import { LayoutContainer } from '../styles/StyledComponents'
 import { fab, faLinkedin, faGithub, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fab, faGithub, faLinkedin, faFacebookSquare)
@@ -52,6 +51,13 @@ const Layout = ({ children }) => {
   const MainContainer = styled.div`
     max-width: 1024px;
     margin: 0 auto;
+  `
+
+  const LayoutContainer = styled.div`
+    margin: 0 auto;
+    max-width: 1024px;
+    background: linear-gradient(to right, #eaeaea, #fff, #fff, #eaeaea);
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.4);
   `
 
   return (

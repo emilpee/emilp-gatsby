@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
-import { Container, Text, PageHeader } from '../styles/StyledComponents'
+import { Container, Text, PageHeader } from '../styles/GlobalStyledComponents'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const NotFoundPage = () => {

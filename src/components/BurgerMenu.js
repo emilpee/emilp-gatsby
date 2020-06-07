@@ -17,16 +17,16 @@ const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
         <BurgerIcon isShown={showMenu} id="menu-icon" />
       </label>
       <Overlay isShown={showMenu}>
-      <Nav>
-        {showMenu &&
-          items.allInternalLink.nodes.map(link => {
-            return (
+        <Nav>
+          {showMenu &&
+            items.allInternalLink.nodes.map(link => {
+              return (
                 <Link key={link.id} style={{ color: '#fff', fontSize: '1.5em' }} to={link.url}>
                   {link.name}
                 </Link>
-            )
-        })}
-      </Nav>
+              )
+            })}
+        </Nav>
       </Overlay>
     </div>
   </BurgerMenuContainer>
@@ -40,10 +40,9 @@ const BurgerMenuContainer = styled.nav`
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 88%;
+  left: 0;
   width: 100%;
   z-index: 9999;
-
 
   @media screen and (max-width: 768px) {
     display: flex;

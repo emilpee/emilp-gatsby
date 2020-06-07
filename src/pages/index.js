@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import Projects from '../components/Projects'
-import { Container, InternalLink, PageHeader, Text } from '../styles/StyledComponents'
+import { Container, InternalLink, PageHeader, Text } from '../styles/GlobalStyledComponents'
 
 const IndexPage = () => (
   <Layout>
@@ -13,7 +13,8 @@ const IndexPage = () => (
         This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg.{' '}
       </Text>
       <Text style={{ margin: '.75rem' }}>
-        Want to know more about me? <InternalLink to="/about">Find out here</InternalLink>.
+        Would you like to know more about me? <InternalLink to="/about">Find out here</InternalLink>
+        .
       </Text>
       <Text style={{ margin: '.75rem' }}>
         If you want to send an inquiry, feel free to use my{' '}

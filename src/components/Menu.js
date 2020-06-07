@@ -1,6 +1,6 @@
 import React from 'react'
-import { MenuLink } from '../styles/StyledComponents'
-import { purple } from '../styles/colors'
+import Link from 'gatsby-link'
+import { purple, black } from '../styles/colors'
 import styled from 'styled-components'
 
 const Menu = ({ items }) => (
@@ -35,8 +35,37 @@ const MenuList = styled.ul`
 `
 
 const MenuListItem = styled.li`
-  color: #222;
+  color: ${black};
   margin-left: 2.5rem;
+`
+
+const MenuLink = styled(Link)`
+  font-family: 'Source Sans Pro-SemiBold', sans-serif;
+  position: relative;
+  color: ${black};
+  margin-left: 2.5rem;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background: ${purple};
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 `
 
 export default Menu

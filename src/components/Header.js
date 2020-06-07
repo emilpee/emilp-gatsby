@@ -58,7 +58,7 @@ const HeaderContainer = styled.div`
   max-height: 4rem;
   padding: 0 1rem;
   position: relative;
-  
+
   @media screen and (max-width: 768px) {
     justify-content: space-between;
     padding: 1rem 0;

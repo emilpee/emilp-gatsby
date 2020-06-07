@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { UlList } from '../styles/StyledComponents'
+import { UlList } from '../styles/GlobalStyledComponents'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -36,7 +36,7 @@ const Projects = () => {
 
   const ProjectCardList = styled(UlList)`
     display: grid;
-    grid-gap: 2rem .5rem;
+    grid-gap: 2rem 0.5rem;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 250px);
 

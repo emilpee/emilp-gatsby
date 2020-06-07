@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { format } from 'date-fns'
 import { black } from '../styles/colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Text } from '../styles/StyledComponents'
+import { Text } from '../styles/GlobalStyledComponents'
 
 const ProjectCard = ({ cardInfo }) => {
   const { edges } = cardInfo.github.user.pinnedItems
@@ -23,7 +23,7 @@ const ProjectCard = ({ cardInfo }) => {
           </Header>
           <Body>
             <small>{languages.nodes[0].name}</small>
-            <Text style={{ fontSize: '0.8em'}}>{description}</Text>
+            <Text style={{ fontSize: '0.8em' }}>{description}</Text>
             <small>
               <span>Last updated {format(new Date(updatedAt), 'd MMMM yyyy')}</span>
             </small>
