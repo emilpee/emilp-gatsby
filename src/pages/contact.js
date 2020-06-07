@@ -9,7 +9,7 @@ const ContactPage = () => (
     <Container>
       <SEO title="contact" />
       <PageHeader>Contact</PageHeader>
-      <Text>Feel free to send me a message. I will reply as soon as possible.</Text>
+      <Text>Send me a message! I will reply in no time.</Text>
       <Form />
     </Container>
   </Layout>

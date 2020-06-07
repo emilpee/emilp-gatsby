@@ -16,10 +16,10 @@ const AboutPage = () => {
         <TextContainer>
           <Text>
             I come from a small village called Jämjö in southern Sweden. I started my career as a
-            journalist, but realized relatively quickly after graduation that maybe it was not
-            something for me. Well, I saw great pleasure in being creative at work and express
-            myself with writing, but somehow I couldn’t relate to the professional role. After some
-            temporary jobs and a longer trip abroad, I came home unemployed, and started to think
+            journalist, but realized quickly after graduation that maybe it was not
+            something for me. Even though I saw great pleasure in being creative at work and express
+            myself in writing, I somehow couldn’t relate to the professional role. After some
+            temporary jobs and a longer trip abroad, I came home unemployed and started to think
             about my future.
           </Text>
           <Text>
@@ -33,9 +33,9 @@ const AboutPage = () => {
             have suited me."
           </BlockQuote>
           <Text>
-            These thoughts were put on ice for a couple of years, but in the spring of 2018 I
+            These thoughts were postponed for a couple of years, but in the spring of 2018 I
             regained my interest and also started to write some basic JavaScript code. In my
-            confusing state, I decided to apply for a vocational education as a front-end developer.
+            confusing state, I decided to apply for a vocational education as a front-end developer at <a href="https://medieinstitutet.se/utbildningar/front-end-developer/" target="_blank">Medieinstitutet</a>.
           </Text>
           <Text>
             My interest in web development only continued to grow, and in April 2020 I finished my
