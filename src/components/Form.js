@@ -5,16 +5,21 @@ import { red, black } from '../styles/colors'
 const Form = () => (
     <FormContainer action="https://getform.io/f/952504c6-82a3-4f35-871c-2e0a3d37202e" method="POST">
         <LabelGroup>
-            <label for="name">Name</label>
-            <TextInput type="text" name="name" />
+            <label htmlFor="name">Name</label>
+            <TextInput type="text" id="name" name="name" required />
         </LabelGroup>
         <LabelGroup>
-            <label for="email">Email</label>
-            <TextInput type="email" name="email" />
+            <label htmlFor="email">Email</label>
+            <TextInput pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+" type="email" name="email" id="email" required />
         </LabelGroup>
         <LabelGroup>
-            <label for="message">Message</label>
-            <TextArea name="message" />
+            <label htmlFor="phone">Phone (optional)</label>
+            <TextInput name="phone" id="phone" />
+        </LabelGroup>
+        <LabelGroup>
+            <label htmlFor="message">Message</label>
+            <TextArea id="message" name="message" required />
         </LabelGroup>
         <ButtonContainer>
             <Button type="submit">Send</Button>
