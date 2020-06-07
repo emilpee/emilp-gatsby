@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: ${lightPurple};
+    text-decoration: none;
 
     &:hover {
       color: ${purple};
