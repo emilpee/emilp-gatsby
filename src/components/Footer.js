@@ -73,7 +73,7 @@ const FooterContainer = styled.footer`
 
   & span {
     color: ${black};
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
 `

@@ -27,12 +27,13 @@ const ProfileImage = () => {
 }
 
 const ProfileImg = styled(Img)`
-  background: #fefefe;
+  background: #eee;
   border-radius: 4px;
   box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
   height: 300px;
+  border-radius: 9999rem;
   margin-top: 1rem;
-  width: 250px;
+  width: 290px;
 `
 
 export default ProfileImage

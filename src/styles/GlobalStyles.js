@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { purple, black } from './colors'
+import { purple, black, lightPurple } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -11,10 +11,18 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  p, span, small, a {
+  p, span, small {
       color: ${black};
       line-height: 1.75em;
       text-decoration: none;
+  }
+
+  a {
+    color: ${lightPurple};
+
+    &:hover {
+      color: ${purple};
+    }
   }
 
   label {
