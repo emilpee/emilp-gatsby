@@ -21,7 +21,7 @@ const BurgerMenu = ({ items, showMenu, handleMenuClick }) => (
         {showMenu &&
           items.allInternalLink.nodes.map(link => {
             return (
-                <Link style={{ color: '#fff', fontSize: '1.5em' }} to={link.url}>
+                <Link key={link.id} style={{ color: '#fff', fontSize: '1.5em' }} to={link.url}>
                   {link.name}
                 </Link>
             )
