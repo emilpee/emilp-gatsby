@@ -35,7 +35,6 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={`${title.charAt(0).toUpperCase() + title.slice(1)}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       meta={[
         {
           name: `description`,
@@ -70,6 +69,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
   )
 }
