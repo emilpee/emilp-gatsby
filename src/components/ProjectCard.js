@@ -61,6 +61,7 @@ const CardItem = styled.a`
 `
 
 const CardHeader = styled.h3`
+  font-family: 'Source Sans Pro-Regular', sans-serif;
   font-size: 1.25em;
   margin: 0;
 `

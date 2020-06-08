@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     margin: 0;
     letter-spacing: 1.5px;
-    font-family: 'Permanent Marker', 'Source Sans Pro-SemiBold', sans-serif;
+    font-family: 'Permanent Marker';
   }
 
   h2 {

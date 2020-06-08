@@ -30,14 +30,30 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/ep-favicon.png`,
+        icons: [
+          {
+            src: `favicons/icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
+            src: `favicons/icon-144x144.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        custom: {
-          families: ['Permanent Marker, Source Sans Pro'],
-          urls: ['fonts.css'],
+        google: {
+          families: ['Permanent Marker', 'Source Sans Pro'],
         },
       },
     },

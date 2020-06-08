@@ -33,7 +33,6 @@ const Footer = () => {
               href={url}
               title={`Visit me on ${name}`}
               key={name}
-              style={{ marginLeft: '1rem' }}
             >
               <FaIcon icon={[type, name]} />
             </a>
@@ -53,12 +52,26 @@ const FaIcon = styled(FontAwesomeIcon)`
   &:hover {
     color: ${purple};
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    margin-left: 1rem;
+  }
 `
 
 const FaIconContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  flex: 1;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `
 
 const FooterContainer = styled.footer`
@@ -73,7 +86,13 @@ const FooterContainer = styled.footer`
 
   & span {
     color: ${black};
+    flex: 7;
     font-size: 0.8em;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
   }
 `
 export default Footer

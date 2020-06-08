@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { red, black } from '../styles/colors'
+import { black, purple } from '../styles/colors'
 
 const Form = () => (
   <FormContainer action="https://getform.io/f/952504c6-82a3-4f35-871c-2e0a3d37202e" method="POST">
@@ -64,13 +64,17 @@ const Button = styled.button`
   margin-top: 1.5rem;
   min-width: 8rem;
   padding: 1rem;
-  background: ${red};
+  background: ${purple};
   border: 0;
   resize: none;
   transition: background 0.4s ease;
 
   &:hover {
     background: ${black};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `
 
