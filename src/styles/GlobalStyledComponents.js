@@ -47,3 +47,11 @@ export const Text = styled.p`
 export const PageHeader = styled.h1`
   margin: 1rem;
 `
+
+export const TextContainer = styled.div`
+  padding: 0 6rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+`

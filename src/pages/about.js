@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
-import { Container, Text, PageHeader } from '../styles/GlobalStyledComponents'
+import { Container, Text, PageHeader, TextContainer } from '../styles/GlobalStyledComponents'
 import { purple, lightPurple } from '../styles/colors'
 import ProfileImage from '../components/ProfileImage'
 
@@ -67,14 +67,6 @@ const AboutPage = () => {
     </Layout>
   )
 }
-
-const TextContainer = styled.div`
-  padding: 0 6rem;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 1rem;
-  }
-`
 
 const BlockQuote = styled.blockquote`
   border-bottom: 1px solid ${purple};
