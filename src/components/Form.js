@@ -14,7 +14,7 @@ const Form = () => (
     </LabelGroup>
     <LabelGroup>
       <label htmlFor="phone">Phone (optional)</label>
-      <TextInput name="phone" id="phone" />
+      <TextInput type="number" inputmode="numeric" name="phone" id="phone" />
     </LabelGroup>
     <LabelGroup>
       <label htmlFor="message">Message</label>
