@@ -16,8 +16,8 @@ const AboutPage = () => {
         <TextContainer>
           <Text>
             I come from a small village called Jämjö in southern Sweden. I started my career as a
-            journalist, but realized quickly after graduation that maybe it was not something for
-            me. Even though I saw great pleasure in being creative at work and express myself in
+            journalist, but realized quickly after graduation that it wasn't for
+            me. Even though I saw pleasure in being creative at work and express myself in
             writing, I somehow couldn’t relate to the professional role. After some temporary jobs
             and a longer trip abroad, I came home unemployed and started to think about my future.
           </Text>
@@ -59,7 +59,7 @@ const AboutPage = () => {
             In addition to developing, I am very fond of music. I have been a bass player for many
             years and have started learning to play the piano. In addition to that, I like to spend
             my time reading, traveling and exploring new environments. I’m also interested in
-            society and politics and have a penchant for quizzes and peanuts.
+            society and politics and have a penchant for peanuts and Google Maps.
           </Text>
         </TextContainer>
         <span style={{ fontWeight: 700 }}>That’s me in a (pea)nutshell!</span>

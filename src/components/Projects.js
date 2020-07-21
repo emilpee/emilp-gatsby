@@ -9,14 +9,14 @@ const Projects = () => {
     query {
       github {
         user(login: "emilpee") {
-          pinnedItems(first: 5, types: [REPOSITORY, GIST]) {
+          pinnedItems(first: 6, types: [REPOSITORY, GIST]) {
             totalCount
             edges {
               node {
                 ... on GitHub_Repository {
                   id
                   name
-                  updatedAt
+                  createdAt
                   description
                   url
                   languages(last: 1, orderBy: { direction: ASC, field: SIZE }) {

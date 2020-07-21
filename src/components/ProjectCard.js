@@ -9,7 +9,7 @@ const ProjectCard = ({ cardInfo }) => {
   const { edges } = cardInfo.github.user.pinnedItems
 
   return edges.map(info => {
-    const { id, url, name, description, updatedAt, languages } = info.node
+    const { id, url, name, description, createdAt, languages } = info.node
 
     return (
       <CardContainer key={id}>
@@ -25,7 +25,7 @@ const ProjectCard = ({ cardInfo }) => {
             <small>{languages.nodes[0].name}</small>
             <Text style={{ fontSize: '0.8em' }}>{description}</Text>
             <small>
-              <span>Last updated {format(new Date(updatedAt), 'd MMMM yyyy')}</span>
+              <small>Created on {format(new Date(createdAt), 'MMMM d, yyyy')}</small>
             </small>
           </Body>
         </CardItem>
