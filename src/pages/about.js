@@ -15,26 +15,15 @@ const AboutPage = () => {
         <ProfileImage />
         <TextContainer>
           <Text>
-            I come from a small village called Jämjö in southern Sweden. I started my career as a
-            journalist, but realized quickly after graduation that it wasn't for
-            me. Even though I saw pleasure in being creative at work and express myself in
-            writing, I somehow couldn’t relate to the professional role. After some temporary jobs
-            and a longer trip abroad, I came home unemployed and started to think about my future.
-          </Text>
-          <Text>
-            In 2015, during a course in my journalism education, I came across CSS during a group
-            assignment when we were going to design and publish our own web magazine. With high
+            I started my professional career as a
+            journalist. In 2015, during a course in my journalism education, I came across CSS during a group
+            assignment when we were going to design a web magazine. With high
             curiosity I took responsibility for the CSS part and noticed that it was something that
             could have suited me.
           </Text>
-          <BlockQuote>
-            "I took responsibility for the CSS part and noticed that it was something that could
-            have suited me."
-          </BlockQuote>
           <Text>
-            These thoughts were postponed for a couple of years, but in the spring of 2018 I
-            regained my interest and also started to write some basic JavaScript code. In my
-            confusing state, I decided to apply for a vocational education as a front-end developer
+            These thoughts were put on hold for a couple of years, but in the spring of 2018 I
+            regained my interest and also started to write some JavaScript code. As I started to get tired of working as a journalist, I decided to apply for a vocational education as a front-end developer
             at{' '}
             <a
               href="https://medieinstitutet.se/utbildningar/front-end-developer/"
@@ -46,9 +35,7 @@ const AboutPage = () => {
             .
           </Text>
           <Text>
-            My interest in web development only continued to grow, and in April 2020 I finished my
-            two year studies from the higher vocational education in front end development. This
-            time, I really feel like I’m on the right track in my career. Since May 2020 I am part
+            My interest in web development only continued to grow, and in April 2020 I graduated from Medieinstitutet. Since then, I am part
             of the front-end team at{' '}
             <a href="https://kaustik.com/" rel="noopener noreferrer" target="_blank">
               Kaustik AB
@@ -56,13 +43,13 @@ const AboutPage = () => {
             , where I mainly work in a tech stack including React and TypeScript.
           </Text>
           <Text>
-            In addition to developing, I am very fond of music. I have been a bass player for many
-            years and have started learning to play the piano. In addition to that, I like to spend
-            my time reading, traveling and exploring new environments. I’m also interested in
-            society and politics and have a penchant for peanuts and Google Maps.
+            In addition to developing, I'm very fond of music. I have been a bass player for many
+            years and recently picked up the piano. In addition to that, I like to spend
+            my time reading, exercising, traveling and exploring new environments. I’m also interested in
+            society and politics and have a penchant for cats, peanuts and Google Maps.
           </Text>
         </TextContainer>
-        <span style={{ fontWeight: 700 }}>That’s me in a (pea)nutshell!</span>
+        <span style={{ fontWeight: 700 }}>That’s me in a nutshell!</span>
       </Container>
     </Layout>
   )

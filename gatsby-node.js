@@ -14,10 +14,6 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
       name: 'About',
       link: '/about',
     },
-    {
-      name: 'Contact',
-      link: '/contact',
-    },
   ]
 
   icons.forEach(icon => {

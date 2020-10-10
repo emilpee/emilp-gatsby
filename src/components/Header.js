@@ -33,7 +33,7 @@ const Header = () => {
             textDecoration: `none`,
           }}
         >
-          Emil
+          EP
         </Link>
       </Title>
       <Menu items={links} />
