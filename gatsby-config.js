@@ -2,8 +2,8 @@ const github = require('./github-config')
 
 module.exports = {
   siteMetadata: {
-    title: `Emil Petersson`,
-    description: `This is a portfolio page for Emil Petersson, a front-end developer based in Gothenburg, Sweden.`,
+    title: `Emil Petersson - Developer`,
+    description: `Portfolio page for Emil Petersson, a front-end developer based in Stockholm, Sweden.`,
     author: `Emil Petersson`,
   },
   plugins: [
